@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cocktail Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Start Screen -->
+  <div id="start-screen">
+    <h1>Cocktail Quiz</h1>
+    <p>Train your memory and master cocktail specs 🍸</p>
+
+    <input type="text" id="username" placeholder="Enter your name">
+
+    <h3>Select a page to study:</h3>
+    <div class="page-buttons">
+      <button class="page-btn" data-page="1">Page 1</button>
+      <button class="page-btn" data-page="2">Page 2</button>
+      <button class="page-btn" data-page="3">Page 3</button>
+      <button class="page-btn" data-page="4">Page 4</button>
+      <button class="page-btn" data-page="5">Page 5</button>
+    </div>
+
+    <div class="full-test">
+      <button id="full-test-btn">📘 Full Exam (All Pages)</button>
+    </div>
+  </div>
+
+  <!-- Quiz Section -->
+  <div id="quiz-section" style="display:none;">
+    <div id="quiz-container"></div>
+    <div id="timer"></div>
+    <!-- ❌ Botão Next removido daqui -->
+    <div id="result-summary"></div>
+  </div>
+
+  <!-- Firebase setup -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    // 🔹 Seu firebaseConfig
+    const firebaseConfig = {
+      apiKey: "AIzaSyD-q8Q23z5_gKF1xK_O4FGJBH9XpWiK-oQ",
+      authDomain: "cocktail-quiz-4bdc8.firebaseapp.com",
+      projectId: "cocktail-quiz-4bdc8",
+      storageBucket: "cocktail-quiz-4bdc8.firebasestorage.app",
+      messagingSenderId: "25063962902",
+      appId: "1:25063962902:web:86f64607634c5a66db3837"
+    };
+
+    // 🔹 Inicializa Firebase e Firestore
+    const app = initializeApp(firebaseConfig);
+    window.db = getFirestore(app); // 👉 coloca o db no objeto global window
+  </script>
+
+  <!-- Agora o script.js pode usar `db` -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

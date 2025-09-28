@@ -1,0 +1,270 @@
+body { 
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #fafafa;
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #1E90FF;
+}
+
+#start-screen {
+  margin-top: 80px;
+}
+
+#start-screen p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#username {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 250px;
+}
+
+.page-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.page-btn {
+  padding: 20px 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.page-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #f57c00, #e65100);
+}
+
+.full-test {
+  margin-top: 30px;
+}
+
+#full-test-btn {
+  padding: 20px 50px;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #1E90FF, #0d6efd);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(13,110,253,0.3);
+}
+
+#full-test-btn:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #0d6efd, #084298);
+}
+
+#quiz-container {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.ingredient-row {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+select {
+  padding: 10px;
+  font-size: 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus {
+  border-color: #1E90FF;
+  box-shadow: 0 0 6px rgba(30,144,255,0.5);
+}
+
+.question-block {
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  max-width: 400px;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px auto;
+  padding: 14px 20px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  max-width: 300px;
+  text-align: center;
+  font-size: 16px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.option:hover {
+  background: #f9f9f9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + span {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(40,167,69,0.4);
+  transform: scale(1.02);
+}
+
+/* === Resultados e feedback === */
+.correct { color: #2e7d32; font-weight: bold; }
+.incorrect { color: #c62828; font-weight: bold; }
+.pass { color: #2e7d32; font-size: 18px; }
+.fail { color: #c62828; font-size: 18px; }
+
+.cocktail-name { color: #d35400; font-weight: bold; }
+
+#timer {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* === Cartões de resultado === */
+.cocktail-card {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  max-width: 700px;
+  text-align: left;
+}
+
+.cocktail-card h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.correct-title { color: #2e7d32; }
+.incorrect-title { color: #c62828; }
+
+.feedback-section {
+  margin-top: 15px;
+  padding: 10px;
+  border-left: 4px solid #1E90FF;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.feedback-section h4 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+}
+
+.feedback-section ul {
+  margin-left: 15px;
+  padding-left: 10px;
+  list-style: none;
+}
+
+.feedback-section li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.feedback-section .wrong { color: #c62828; font-weight: bold; }
+.feedback-section .correct { color: #2e7d32; font-weight: bold; }
+
+/* === Botões da tela de teste === */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.action-buttons button:hover { background: #1b5e20; }
+
+#end-btn {
+  background: #d32f2f;
+}
+#end-btn:hover {
+  background: #9a0007;
+}
+
+#home-btn {
+  background: #1976d2;
+}
+#home-btn:hover {
+  background: #0d47a1;
+}
+
+/* === Botões da tela de resultados === */
+.result-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.result-buttons button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.result-buttons button:hover { background: #1b5e20; }

@@ -1,0 +1,217 @@
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+  // 🔹 Cole aqui o bloco firebaseConfig do seu projeto
+  const firebaseConfig = {
+    apiKey: "AIzaSyD-q8Q23z5_gKF1xK_O4FGJBH9XpWiK-oQ",
+    authDomain: "cocktail-quiz-4bdc8.firebaseapp.com",
+    projectId: "cocktail-quiz-4bdc8",
+    storageBucket: "cocktail-quiz-4bdc8.firebasestorage.app",
+    messagingSenderId: "25063962902",
+    appId: "1:25063962902:web:86f64607634c5a66db3837"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // 🔹 JSON com os coquetéis
+  const cocktails = [
+    {
+      page: 1,
+      name: "Old Fashioned",
+      ingredients: [
+        { ingredient: "Buffalo Trace", quantity: "8 Counts" },
+        { ingredient: "Demerara Sugar", quantity: "2 Barspns" },
+        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "2 Dashes" },
+        { ingredient: "Orange Zest", quantity: "1 Unit" }
+      ],
+      glass: "Sexy Rocks",
+      method: "Stir & Strain",
+      garnish: "Orange Zest",
+      ice: "Cubed"
+    },
+    {
+      page: 1,
+      name: "Daiquiri",
+      ingredients: [
+        { ingredient: "Bacardi", quantity: "8 Counts" },
+        { ingredient: "BSC Simple 1:1", quantity: "3 Counts" },
+        { ingredient: "Lime Juice", quantity: "3 Counts" }
+      ],
+      glass: "Coupe",
+      method: "Shake & Fine Strain",
+      garnish: "None",
+      ice: "None"
+    },
+    {
+      page: 1,
+      name: "Whiskey Sour",
+      ingredients: [
+        { ingredient: "Buffalo Trace", quantity: "6 Counts" },
+        { ingredient: "Lemon Mix", quantity: "3 Counts" },
+        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "1 Dash" },
+        { ingredient: "Oggs", quantity: "15 ml Jig" }
+      ],
+      glass: "Sexy Rocks",
+      method: "Shake & Strain",
+      garnish: "Lemon Sq",
+      ice: "Crushed"
+    },
+    {
+      page: 1,
+      name: "Woo Woo",
+      ingredients: [
+       { ingredient: "Ketel One", quantity: "3 Counts" },
+       { ingredient: "Briottet Crème De Peche", quantity: "3 Counts" },
+       { ingredient: "Cranberry Juice Eager", quantity: "6 Counts" }
+      ],
+      glass: "Highball",
+      method: "Build",
+      garnish: "Lime Sq",
+      ice: "Cubed"
+    },
+    {
+      page: 1,
+       name: "Vodka Martini",
+       ingredients: [
+       { ingredient: "Dutch Barn Vodka", quantity: "8 Counts" },
+       { ingredient: "Carpano Dry Vermouth", quantity: "1 Count" }
+      ],
+      glass: "Nick and Nora",
+      method: "Stir & Strain",
+      garnish: "Lemon/Lime/Grapefruit Zest or Olive",
+      ice: "None"
+    },
+    {
+      page: 1,
+       name: "White Russian",
+       ingredients: [
+       { ingredient: "Whole Milk", quantity: "25 ml Jig" },
+       { ingredient: "Whipping Cream", quantity: "25 ml Jig" },
+       { ingredient: "Ketel One", quantity: "4 Counts" },
+       { ingredient: "Mr Blacks Coffee", quantity: "4 Counts" }
+      ],
+      glass: "Rocks",
+      method: "Build & Quick Stir",
+      garnish: "None",
+      ice: "Cubed"
+    },
+    {
+      page: 2,
+      name: "Sex on the Beach",
+      ingredients: [
+        { ingredient: "Pineapple Juice", quantity: "3 Counts" },
+        { ingredient: "Cranberry Juice", quantity: "3 Counts" },
+        { ingredient: "Lemon Mix", quantity: "3 Counts" },
+        { ingredient: "MK Dark Berries", quantity: "2 Counts" },
+        { ingredient: "Briottet Peche", quantity: "2 Counts" },
+        { ingredient: "Ketel One", quantity: "2 Counts" }
+      ],
+      glass: "Highball",
+      method: "Hard Shake and Strain",
+      garnish: "Orange Sq & a cherry",
+      ice: "Cubed"
+    },
+    {
+      page: 2,
+      name: "Southside",
+      ingredients: [
+        { ingredient: "Millers Gin", quantity: "8 Counts" },
+        { ingredient: "Mint Leaves", quantity: "8 Leaves" },
+        { ingredient: "Lime Juice", quantity: "3 Counts" },
+        { ingredient: "BSC Gomme 1:1", quantity: "2 Counts" }
+      ],
+      glass: "Nick and Nora",
+      method: "Shake & Double Strain",
+      garnish: "Small Mint Sprig",
+      ice: "None"
+    },
+    {
+      page: 2,
+      name: "Dark'n'Stormy",
+      ingredients: [
+        { ingredient: "Goslings Black Seal Rum", quantity: "6 Counts" },
+        { ingredient: "Lime Juice", quantity: "3 Counts" },
+        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "1 Dash" },
+        { ingredient: "Artisan Ginger Beer", quantity: "1/2 Can" }
+      ],
+      glass: "Tall Highball",
+      method: "Build",
+      garnish: "Lime Wheel",
+      ice: "Cubed"
+    },
+    {
+      page: 2,
+      name: "Moscow Mule",
+      ingredients: [
+        { ingredient: "Ketel One", quantity: "6 Counts" },
+        { ingredient: "Lime Juice", quantity: "3 Counts" },
+        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "1 Dash" },
+        { ingredient: "Artisan Ginger Beer", quantity: "1/2 Can" }
+      ],
+      glass: "Tall Highball",
+      method: "Build",
+      garnish: "Lime Wheel",
+      ice: "Cubed"
+    },
+    {
+      page: 2,
+      name: "Caipirinha",
+      ingredients: [
+        { ingredient: "Sagatiba Pura", quantity: "8 Counts" },
+        { ingredient: "Lime Sq", quantity: "6 Units" },
+        { ingredient: "Caster Sugar", quantity: "2 Barspns" }
+      ],
+      glass: "Rocks",
+      method: "Muddle Shake & Pour",
+      garnish: "None",
+      ice: "Cubed"
+    },
+    {
+      page: 2,
+      name: "Bees Knees",
+      ingredients: [
+        { ingredient: "Millers Gin", quantity: "8 Counts" },
+        { ingredient: "Lemon Mix", quantity: "2 Counts" },
+        { ingredient: "Lemon Sq", quantity: "2 Units" },
+        { ingredient: "Honey", quantity: "15 ml Jig" }
+
+      ],
+      glass: "Nick and Nora",
+      method: "Shake and Double Strain",
+      garnish: "Lemon Zest",
+      ice: "None"
+    },
+    {
+      page: 3,
+      name: "French Martini",
+      ingredients: [
+        { ingredient: "Pineapple Juice", quantity: "4 Counts" },
+        { ingredient: "Dutch Barn Vodka", quantity: "5 Counts" },
+        { ingredient: "MK Dark Berries", quantity: "2 Count" }
+      ],
+      glass: "Coupe",
+      method: "Hard Shake & Double Strain",
+      garnish: "Diced Freeze dried Raspberries",
+      ice: "None"
+    }
+  ];
+
+  // 🔹 Função para popular Firestore
+  async function seedCocktails() {
+    try {
+      for (const cocktail of cocktails) {
+        await addDoc(collection(db, "cocktails"), cocktail);
+        console.log("Added:", cocktail.name);
+      }
+      alert("✅ Coquetéis adicionados com sucesso!");
+    } catch (e) {
+      console.error("Erro ao adicionar:", e);
+      alert("❌ Erro ao adicionar os coquetéis. Veja o console.");
+    }
+  }
+
+  // Executa assim que a página carregar
+  seedCocktails();
+</script>
