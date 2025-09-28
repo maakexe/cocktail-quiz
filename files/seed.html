@@ -1,32 +1,21 @@
-INTEGRADO COM NETLIFY
+<script type="module"> 
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-// -----------------------------
-// script.js — Cocktail Quiz (Firestore integration)
-// -----------------------------
+  const firebaseConfig = {
+    apiKey: "AIzaSyD-q8Q23z5_gKF1xK_O4FGJBH9XpWiK-oQ",
+    authDomain: "cocktail-quiz-4bdc8.firebaseapp.com",
+    projectId: "cocktail-quiz-4bdc8",
+    storageBucket: "cocktail-quiz-4bdc8.firebasestorage.app",
+    messagingSenderId: "25063962902",
+    appId: "1:25063962902:web:86f64607634c5a66db3837"
+  };
 
-import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
 
-// 🔹 Vai guardar os coquetéis carregados do Firestore
-let cocktailDBPages = {};
-
-// 🔹 Busca coquetéis no Firestore e organiza por página
-async function loadCocktails() {
-  const querySnapshot = await getDocs(collection(window.db, "cocktails"));
-  let cocktails = {};
-  querySnapshot.forEach(doc => {
-    const data = doc.data();
-    if (!cocktails[data.page]) cocktails[data.page] = [];
-    cocktails[data.page].push(data);
-  });
-  cocktailDBPages = cocktails;
-  console.log("✅ Cocktails carregados do Firestore:", cocktailDBPages);
-}
-
-
-
-// Cocktails grouped by pages
-const cocktailDBPages = {
-  1: [
+  // 🔹 Array ÚNICO com todos os coquetéis
+  const cocktails = [
     {
       page: 1,
       name: "Old Fashioned",
@@ -106,10 +95,7 @@ const cocktailDBPages = {
       method: "Build & Quick Stir",
       garnish: "None",
       ice: "Cubed"
-    }
-
-  ],
-  2: [
+    },
     {
       page: 2,
       name: "Sex on the Beach",
@@ -195,10 +181,7 @@ const cocktailDBPages = {
       garnish: "Lemon Zest",
       ice: "None"
     },
-   
-],
-3: [
-  {
+    {
     page: 3,
       name: "French Martini",
       ingredients: [
@@ -285,11 +268,9 @@ const cocktailDBPages = {
       method: "Stir & Strain",
       garnish: "Orange Zest & Cherry",
       ice: "None"
-    }
-],
-4: [
-  {
-    page: 4,
+    },
+    {
+      page: 4,
       name: "Boulevardier",
       ingredients: [
         { ingredient: "Buffalo Trace", quantity: "4 Counts" },
@@ -372,11 +353,9 @@ const cocktailDBPages = {
       method: "Shake & Double Strain",
       garnish: "Lime Zest",
       ice: "None"
-    }
-],
-5: [
-  {
-    page: 5,
+    },
+    {
+      page: 5,
       name: "Penicillin",
       ingredients: [
         { ingredient: "Laphroaig", quantity: "3 Counts" },
@@ -461,40 +440,20 @@ const cocktailDBPages = {
       garnish: "Banana Leaf",
       ice: "Cubed"
     }
-],
-};
+  ];
 
-// Distratores extras
-const extraIngredients = [
-  "BSC Simple 1:1","Buffalo Trace","Bitter Truth Jerry Thomas Bitters","Lime Juice",
-  "Cranberry Juice Eager","Lemon Mix","Ketel One","Dutch Barn Vodka",
-  "Briottet Crème De Peche","Mr Blacks Coffee","Bacardi Carta Blanca","Millers Gin",
-  "Carpano Dry Vermouth","Whole Milk","Whipping Cream","Oggs",
-  "Demerara Sugar","Orange Zest","Pineapple Juice","MK Dark Berries",
-  "Goslings Black Seal Rum","Mint Leaves","Artisan Ginger Beer","Caster Sugar","Lemon Sq", "Sagatiba Pura","Lime Sq",
-  "Honey","BSC Disco Grenadine","BSC Orgeat","Appleton Estate 8 Year","Martini Rubino Vermouth","Briottet Marasquin","Campari","Courvoisier VS",
-  "Cointreau","Tanqueray","Briottet Crème De Cacao Brown","Sipsmith Sloe Gin","Briottet Crème d'Apricot","La Fee Absinthe","Peychaud Bitters",
-  "Woodford Rye","Briottet Violette","Lemon Zest Discard","Laphroaig","Johnnie Walker Black","Kaveri Ginger","Luxardo Amaretto","Lemon Zest",
-  "Herno Old Tom Gin","Soda Pm","Benedictine","Lillet Blanc","Bacardi Coconut","Midori","Giffard Banane du Brésil"
-];
+  async function seedCocktails() {
+    try {
+      for (const cocktail of cocktails) {
+        await addDoc(collection(db, "cocktails"), cocktail);
+        console.log("✅ Added:", cocktail.name);
+      }
+      alert("✅ Todos os coquetéis foram adicionados com sucesso!");
+    } catch (e) {
+      console.error("❌ Erro ao adicionar:", e);
+      alert("❌ Erro ao adicionar os coquetéis. Veja o console.");
+    }
+  }
 
-const extraQuantities = [
-  "1 Count","2 Counts","3 Counts","4 Counts","5 Counts","6 Counts","8 Counts","12 Counts",
-  "15 ml Jig","25 ml Jig","50 ml Jig","1 Barspn","2 Barspns","1 Dash","2 Dashes","3 Dashes",
-  "1 Unit","2 Units","3 Units","8 Leaves","1/2 Can","6 Units","Top"
-];
-
-const extraGlassware = [
- "Sexy Rocks","Coupe","Highball","Nick and Nora","Rocks","Tall Highball"
-];
-
-const extraGarnishes = [
-  "Orange Zest","Lime Sq","Lemon/Lime/Grapefruit Zest or Olive","None","Orange Sq & Cherry","Small Mint Sprig","Lemon Zest","Lime Wheel","Mint Sprig, Lime Sq, Cherry",
-  "Orange Zest & Cherry", "Lemon Zest & Sugar Rim","Grapefruit Zest","Cinnamon and Nutmeg Dust","Luxardo Cherries","Flamed Orange Zest","Lemon Sq & Cherry","Banana Leaf"
-];
-
-const extraMethods = ["Stir & Strain","Shake & Fine Strain","Shake and Strain","Build","Build & Quick Stir","Hard Shake and Strain",
-  "Shake & Double Strain","Muddle Shake & Pour","Blend 3 cubes & Fine Strain","Rinse / Stir & Strain","Build Over Ice Ball","Build and Churn",
-  "Shake, Strain & Top"];
-
-const extraIce = ["Crushed","Cubed","Iceball","None","7 Cubes","Dry Ice"];
+  seedCocktails();
+</script>
