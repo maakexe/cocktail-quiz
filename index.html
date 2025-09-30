@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,41 +6,54 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Start Screen -->
+  <!-- === Start Screen === -->
   <div id="start-screen">
     <h1>Cocktail Quiz</h1>
-    <p>Train your memory and master cocktail specs 🍸</p>
+    <p>Train your Cocktail Specs 🍸</p>
 
     <input type="text" id="username" placeholder="Enter your name">
 
-    <h3>Select a page to study:</h3>
-    <div class="page-buttons">
-      <button class="page-btn" data-page="1">Page 1</button>
-      <button class="page-btn" data-page="2">Page 2</button>
-      <button class="page-btn" data-page="3">Page 3</button>
-      <button class="page-btn" data-page="4">Page 4</button>
-      <button class="page-btn" data-page="5">Page 5</button>
+    <h3>Choose a Quiz Category:</h3>
+
+    <!-- Classics Category -->
+    <div class="category">
+      <button class="category-btn uniform-btn" data-category="classics">🍸 Classic Cocktail Specs</button>
+      <div id="classics-pages" class="pages-container" style="display:none;">
+        <button class="page-btn uniform-btn" data-category="classics" data-page="1">Page 1</button>
+        <button class="page-btn uniform-btn" data-category="classics" data-page="2">Page 2</button>
+        <button class="page-btn uniform-btn" data-category="classics" data-page="3">Page 3</button>
+        <button class="page-btn uniform-btn" data-category="classics" data-page="4">Page 4</button>
+        <button class="page-btn uniform-btn" data-category="classics" data-page="5">Page 5</button>
+        <div class="full-test">
+          <button class="full-test-btn uniform-btn" data-category="classics">📘 Full Exam (Classics)</button>
+        </div>
+      </div>
     </div>
 
-    <div class="full-test">
-      <button id="full-test-btn">📘 Full Exam (All Pages)</button>
+    <!-- Menu Category -->
+    <div class="category">
+      <button class="category-btn uniform-btn" data-category="menu">📖 Cocktail Menu Specs</button>
+      <div id="menu-pages" class="pages-container" style="display:none;">
+        <p>🚧 Coming soon...</p>
+        <div class="full-test">
+          <button class="full-test-btn uniform-btn" data-category="menu">📘 Full Exam (Menu)</button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Quiz Section -->
+  <!-- === Quiz Section === -->
   <div id="quiz-section" style="display:none;">
     <div id="quiz-container"></div>
     <div id="timer"></div>
-    <!-- ❌ Botão Next removido daqui -->
     <div id="result-summary"></div>
   </div>
 
-  <!-- Firebase setup -->
+  <!-- === Firebase Setup === -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-    // 🔹 Seu firebaseConfig
     const firebaseConfig = {
       apiKey: "AIzaSyD-q8Q23z5_gKF1xK_O4FGJBH9XpWiK-oQ",
       authDomain: "cocktail-quiz-4bdc8.firebaseapp.com",
@@ -50,12 +63,11 @@
       appId: "1:25063962902:web:86f64607634c5a66db3837"
     };
 
-    // 🔹 Inicializa Firebase e Firestore
     const app = initializeApp(firebaseConfig);
-    window.db = getFirestore(app); // 👉 coloca o db no objeto global window
+    window.db = getFirestore(app); // 👉 torna o db acessível globalmente
   </script>
 
-  <!-- Agora o script.js pode usar `db` -->
+  <!-- === Main Script === -->
   <script type="module" src="script.js"></script>
 </body>
 </html>

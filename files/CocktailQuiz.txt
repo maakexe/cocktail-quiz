@@ -32,6 +32,8 @@ Build Over Ice Ball
 BSC Simple 1:1
 BSC Disco Grenadine
 BSC Orgeat
+BSC Passion Fruit
+BSC Nogave
 
 
 ######## Whiskey ######## :
@@ -62,6 +64,8 @@ Cinnamon and Nutmeg Dust
 Flamed Orange Zest
 Lemon Sq & Cherry
 Banana Leaf
+Lime Circle x2
+Grapefruit Sq
 
 
 ######## Bitters ######## :
@@ -69,6 +73,7 @@ Banana Leaf
 
 Bitter Truth Jerry Thomas Bitters
 Peychaud Bitters
+Angostura Bitters
 
 
 ######## Juices ######## :
@@ -78,6 +83,7 @@ Lime Juice
 Cranberry Juice Eager
 Lemon Mix
 Pineapple Juice
+Grapefruit Juice
 
 
 ######## Vodkas ######## :
@@ -105,6 +111,8 @@ Luxardo Amaretto
 Benedictine ( herbal )
 Midori
 Giffard Banane du Brésil
+Velvet Falernum Liqueur
+Baileys
 
 
 ######## Rums ######## :
@@ -114,6 +122,8 @@ Bacardi Carta Blanca
 Goslings Black Seal Rum
 Appleton Estate 8 Year
 Bacardi Coconut
+Appleton Signature Rum
+Havana 7
 
 
 ######## Gins ######## :
@@ -136,6 +146,7 @@ Martini Rubino Vermouth
 
 
 Sagatiba Pura
+Pisco ABA
 
 
 ######## Cognac ######## :
@@ -169,6 +180,8 @@ Highball
 Nick and Nora
 Rocks
 Tall Highball
+Bremen Beer
+Tubo
 
 
 ######## Absinthe ######## :
@@ -181,12 +194,21 @@ La Fee Absinthe
 
 
 Soda
+Coca Cola Botte
 
 
 ######## Aperitif ######## :
 
 
 Lillet Blanc
+
+
+######## Tequilas ######## :
+
+
+Patron Silver
+El Jimador Blanco
+
 
 
 ##########################

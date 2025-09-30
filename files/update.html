@@ -1,0 +1,32 @@
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getFirestore, collection, getDocs, updateDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+  // 🔹 Configuração do Firebase (mesmo que você já usa no projeto)
+  const firebaseConfig = {
+    apiKey: "AIzaSyD-q8Q23z5_gKF1xK_O4FGJBH9XpWiK-oQ",
+    authDomain: "cocktail-quiz-4bdc8.firebaseapp.com",
+    projectId: "cocktail-quiz-4bdc8",
+    storageBucket: "cocktail-quiz-4bdc8.firebasestorage.app",
+    messagingSenderId: "25063962902",
+    appId: "1:25063962902:web:86f64607634c5a66db3837"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // 🔹 Atualiza todos os coquetéis adicionando "category"
+  async function addCategoryToCocktails() {
+    const querySnapshot = await getDocs(collection(db, "cocktails"));
+    for (const d of querySnapshot.docs) {
+      const ref = doc(db, "cocktails", d.id);
+      await updateDoc(ref, {
+        category: "classics" // 👉 você pode mudar aqui se quiser "menu"
+      });
+      console.log(`✅ Updated ${d.data().name} with category "classics"`);
+    }
+    alert("Todos os coquetéis foram atualizados com a categoria!");
+  }
+
+  addCategoryToCocktails();
+</script>

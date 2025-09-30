@@ -1,4 +1,5 @@
-body { 
+/* === Base global === */
+body {
   font-family: Arial, sans-serif;
   margin: 20px;
   background: #fafafa;
@@ -12,6 +13,12 @@ h1 {
   color: #1E90FF;
 }
 
+#timer {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* === Tela inicial === */
 #start-screen {
   margin-top: 80px;
 }
@@ -28,8 +35,10 @@ h1 {
   border-radius: 8px;
   margin-bottom: 20px;
   width: 250px;
+  text-align: center;
 }
 
+/* === Botões de página === */
 .page-buttons {
   display: flex;
   justify-content: center;
@@ -54,11 +63,8 @@ h1 {
   background: linear-gradient(135deg, #f57c00, #e65100);
 }
 
-.full-test {
-  margin-top: 30px;
-}
-
-#full-test-btn {
+/* === Botões de categoria (Classics/Menu) === */
+.category-btn {
   padding: 20px 50px;
   font-size: 22px;
   font-weight: bold;
@@ -69,18 +75,21 @@ h1 {
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0 5px 15px rgba(13,110,253,0.3);
+  margin: 10px 0;
 }
 
-#full-test-btn:hover {
+.category-btn:hover {
   transform: scale(1.08);
   background: linear-gradient(135deg, #0d6efd, #084298);
 }
 
+/* === Container do quiz === */
 #quiz-container {
   margin: 20px auto;
   max-width: 600px;
 }
 
+/* === Seletores de ingredientes === */
 .ingredient-row {
   margin: 10px 0;
   display: flex;
@@ -102,6 +111,7 @@ select:focus {
   box-shadow: 0 0 6px rgba(30,144,255,0.5);
 }
 
+/* === Blocos de perguntas === */
 .question-block {
   margin: 20px auto;
   padding: 15px;
@@ -158,11 +168,6 @@ input[type="radio"]:checked + span {
 
 .cocktail-name { color: #d35400; font-weight: bold; }
 
-#timer {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
 /* === Cartões de resultado === */
 .cocktail-card {
   background: #fff;
@@ -184,6 +189,7 @@ input[type="radio"]:checked + span {
 .correct-title { color: #2e7d32; }
 .incorrect-title { color: #c62828; }
 
+/* === Seções de feedback === */
 .feedback-section {
   margin-top: 15px;
   padding: 10px;
@@ -234,20 +240,6 @@ input[type="radio"]:checked + span {
 
 .action-buttons button:hover { background: #1b5e20; }
 
-#end-btn {
-  background: #d32f2f;
-}
-#end-btn:hover {
-  background: #9a0007;
-}
-
-#home-btn {
-  background: #1976d2;
-}
-#home-btn:hover {
-  background: #0d47a1;
-}
-
 /* === Botões da tela de resultados === */
 .result-buttons {
   display: flex;
@@ -268,3 +260,20 @@ input[type="radio"]:checked + span {
 }
 
 .result-buttons button:hover { background: #1b5e20; }
+
+/* === Novas classes para uniformizar === */
+.uniform-btn {
+  min-width: 180px;
+  padding: 12px 16px;
+  margin: 6px;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+}
+
+.centered-label,
+.centered-select {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
