@@ -25,6 +25,31 @@ Em 1–2 minutos, o site no Netlify já atualiza sozinho.
 🔥 E como você já está usando Firebase no projeto, não precisa mexer no Netlify sempre que alterar o banco de dados — só se mudar o código do app.
 
 
+⚡ Onde ver commits anteriores?
+
+Você tem algumas opções:
+
+No terminal:
+
+git log
+
+Mostra a lista de commits com autor, data e mensagem.
+(Você pode sair do git log apertando q no teclado).
+
+Versão resumida:
+
+git log --oneline
+
+
+No GitHub (site):
+
+Acesse o repositório no GitHub.
+
+Clique em Commits (fica geralmente acima da lista de arquivos, ou em Code > Commits).
+
+Lá você vê todos os commits que já foram enviados com git push.
+
+
 #########################################################################################################################################################################
 
 
@@ -54,8 +79,8 @@ async function loadCocktails() {
 
 // Cocktails grouped by pages
 const cocktailDBPages = {
-  1: [
-    {
+1: [
+   {
       page: 1,
       name: "Old Fashioned",
       ingredients: [
@@ -136,12 +161,12 @@ const cocktailDBPages = {
       ice: "Cubed"
     }
 
-  ],
-  2: [
+],
+2:  [
     {
-      page: 2,
-      name: "Sex on the Beach",
-      ingredients: [
+       page: 2,
+       name: "Sex on the Beach",
+       ingredients: [
         { ingredient: "Pineapple Juice", quantity: "3 Counts" },
         { ingredient: "Cranberry Juice", quantity: "3 Counts" },
         { ingredient: "Lemon Mix", quantity: "3 Counts" },
@@ -226,8 +251,8 @@ const cocktailDBPages = {
    
 ],
 3: [
-  {
-    page: 3,
+   {
+      page: 3,
       name: "French Martini",
       ingredients: [
         { ingredient: "Pineapple Juice", quantity: "4 Counts" },
@@ -316,8 +341,8 @@ const cocktailDBPages = {
     }
 ],
 4: [
-  {
-    page: 4,
+   {
+      page: 4,
       name: "Boulevardier",
       ingredients: [
         { ingredient: "Buffalo Trace", quantity: "4 Counts" },
@@ -403,8 +428,8 @@ const cocktailDBPages = {
     }
 ],
 5: [
-  {
-    page: 5,
+   {
+      page: 5,
       name: "Penicillin",
       ingredients: [
         { ingredient: "Laphroaig", quantity: "3 Counts" },
@@ -491,8 +516,8 @@ const cocktailDBPages = {
     }
 ],
 6: [
-  {
-    page: 6,
+   {
+      page: 6,
       name: "Serious Zombie",
       ingredients: [
         { ingredient: "BSC Disco Grenadine", quantity: "1 Count" },
