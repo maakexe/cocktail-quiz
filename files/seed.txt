@@ -17,53 +17,67 @@
   // 🔹 Array ÚNICO com todos os coquetéis
   const cocktails = [
     {
-      page: 1,
-      name: "Old Fashioned",
+      category: "classics",
+      page: 6,
+      name: "Serious Zombie",
       ingredients: [
-        { ingredient: "Buffalo Trace", quantity: "8 Counts" },
-        { ingredient: "Demerara Sugar", quantity: "2 Barspns" },
-        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "2 Dashes" },
-        { ingredient: "Orange Zest", quantity: "1 Unit" }
+        { ingredient: "BSC Disco Grenadine", quantity: "1 Count" },
+        { ingredient: "BSC Passion Fruit", quantity: "1 Count" },
+        { ingredient: "BSC Simple 1:1", quantity: "1 Count" },
+        { ingredient: "Pineapple Juice", quantity: "2 Counts" },
+        { ingredient: "Grapefruit Juice", quantity: "2 Counts" },
+	{ ingredient: "Lime Juice", quantity: "2 Counts" },
+        { ingredient: "Bacardi Carta Blanca", quantity: "2 Counts" },
+        { ingredient: "Appleton Signature Rum", quantity: "2 Counts" },
+        { ingredient: "Grand Marnier", quantity: "2 Counts" },
+	{ ingredient: "Velvet Falernum Liqueur", quantity: "1 Count" },
+	{ ingredient: "La Fee Absinthe", quantity: "1 Count" }
       ],
-      glass: "Sexy Rocks",
-      method: "Stir & Strain",
-      garnish: "Orange Zest",
+      glass: "Bremen Beer",
+      method: "Shake and Strain",
+      garnish: "Banana Leaf",
       ice: "Cubed"
     },
     {
-      page: 1,
-      name: "Daiquiri",
+      category: "classics",
+      page: 6,
+      name: "Screaming Multiple Orgasm",
       ingredients: [
-        { ingredient: "Bacardi Carta Blanca", quantity: "8 Counts" },
-        { ingredient: "BSC Simple 1:1", quantity: "3 Counts" },
-        { ingredient: "Lime Juice", quantity: "3 Counts" }
+        { ingredient: "Whole Milk", quantity: "50 ml Jig" },
+        { ingredient: "Whipping Cream", quantity: "50 ml Jig" },
+	{ ingredient: "Ketel One", quantity: "2 Counts" },
+        { ingredient: "Mr Blacks Coffee", quantity: "2 Counts" },
+        { ingredient: "Baileys", quantity: "2 Counts" },
+        { ingredient: "Luxardo Amaretto", quantity: "2 Counts" }
       ],
-      glass: "Coupe",
-      method: "Shake & Fine Strain",
-      garnish: "None",
-      ice: "None"
+      glass: "Highball",
+      method: "Shake and Strain",
+      garnish: "Luxardo Cherries",
+      ice: "Cubed"
     },
     {
-      page: 1,
-      name: "Whiskey Sour",
+      category: "classics",
+      page: 6,
+      name: "Tommy's Margarita",
       ingredients: [
-        { ingredient: "Buffalo Trace", quantity: "6 Counts" },
-        { ingredient: "Lemon Mix", quantity: "3 Counts" },
-        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "1 Dash" },
-        { ingredient: "Oggs", quantity: "15 ml Jig" }
+        { ingredient: "BSC Nogave", quantity: "3 Counts" },
+        { ingredient: "Lime Juice", quantity: "3 Counts" },
+        { ingredient: "Patron Silver", quantity: "8 Counts" }
       ],
       glass: "Sexy Rocks",
       method: "Shake and Strain",
-      garnish: "Lemon Sq",
-      ice: "Crushed"
+      garnish: "Lime Circle x2",
+      ice: "Cubed"
     },
     {
-      page: 1,
-      name: "Woo Woo",
+      category: "classics",
+      page: 6,
+      name: "Cuba Libre",
       ingredients: [
-       { ingredient: "Ketel One", quantity: "3 Counts" },
-       { ingredient: "Briottet Crème De Peche", quantity: "3 Counts" },
-       { ingredient: "Cranberry Juice Eager", quantity: "6 Counts" }
+        { ingredient: "Demerara Sugar", quantity: "4 Counts" },
+        { ingredient: "Lime Sq", quantity: "2 Counts" },
+        { ingredient: "Havana 7", quantity: "2 Counts" },
+        { ingredient: "Coca Cola Bottle", quantity: "Top" }
       ],
       glass: "Highball",
       method: "Build",
@@ -71,254 +85,109 @@
       ice: "Cubed"
     },
     {
-      page: 1,
-       name: "Vodka Martini",
-       ingredients: [
-       { ingredient: "Dutch Barn Vodka", quantity: "8 Counts" },
-       { ingredient: "Carpano Dry Vermouth", quantity: "1 Count" }
+      category: "classics",
+      page: 6,
+      name: "Paloma",
+      ingredients: [
+        { ingredient: "El Jimador Blanco", quantity: "6 Counts" },
+        { ingredient: "Lime Juice", quantity: "2 Counts" },
+        { ingredient: "Grapefruit Juice", quantity: "3 Counts" },
+        { ingredient: "BSC Nogave", quantity: "2 Counts" },
+        { ingredient: "Soda Pm", quantity: "Top" }
       ],
-      glass: "Nick and Nora",
-      method: "Stir & Strain",
-      garnish: "Lemon/Lime/Grapefruit Zest or Olive",
-      ice: "None"
-    },
-    {
-      page: 1,
-       name: "White Russian",
-       ingredients: [
-       { ingredient: "Whole Milk", quantity: "25 ml Jig" },
-       { ingredient: "Whipping Cream", quantity: "25 ml Jig" },
-       { ingredient: "Ketel One", quantity: "4 Counts" },
-       { ingredient: "Mr Blacks Coffee", quantity: "4 Counts" }
-      ],
-      glass: "Rocks",
-      method: "Build & Quick Stir",
-      garnish: "None",
+      glass: "Highball",
+      method: "Shake, Strain & Top",
+      garnish: "Grapefruit Sq",
       ice: "Cubed"
     },
     {
-      page: 2,
-      name: "Sex on the Beach",
+      category: "classics",
+      page: 6,
+      name: "Pisco Sour",
       ingredients: [
-        { ingredient: "Pineapple Juice", quantity: "3 Counts" },
-        { ingredient: "Cranberry Juice", quantity: "3 Counts" },
-        { ingredient: "Lemon Mix", quantity: "3 Counts" },
-        { ingredient: "MK Dark Berries", quantity: "2 Counts" },
-        { ingredient: "Briottet Peche", quantity: "2 Counts" },
-        { ingredient: "Ketel One", quantity: "2 Counts" }
+        { ingredient: "Lime Juice", quantity: "3 Counts" },
+        { ingredient: "BSC Simple 1:1", quantity: "2 Counts" },
+        { ingredient: "Pisco ABA", quantity: "6 Counts" },
+	{ ingredient: "Oggs", quantity: "25 ml Jig" },
+        { ingredient: "Angostura Bitters", quantity: "1 Dash" }
+      ],
+      glass: "Tubo",
+      method: "Blend 3 Cubes",
+      garnish: "3 Dashes Angostura Bitters",
+      ice: "None"
+    },
+   {
+      category: "classics",
+      page: 7,
+      name: "West Indian Yellowbird",
+      ingredients: [
+        { ingredient: "Orange Juice", quantity: "4 Counts" },
+        { ingredient: "Pineapple Juice", quantity: "4 Counts" },
+        { ingredient: "Wray & Nephew Overproof", quantity: "2 Counts" },
+        { ingredient: "Giffard Banane du Brésil", quantity: "2 Counts" },
+        { ingredient: "Galliano", quantity: "2 Counts" },
+	{ ingredient: "Goslings Black Seal Rum", quantity: "2 Counts" }
       ],
       glass: "Highball",
-      method: "Hard Shake and Strain",
+      method: "Shake and Strain",
+      garnish: "Lime Sq",
+      ice: "Cubed"
+    },
+    {
+      category: "classics",
+      page: 7,
+      name: "Pimms Cup",
+      ingredients: [
+        { ingredient: "Lemon Sq", quantity: "1 Unit" },
+        { ingredient: "Orange Slice", quantity: "1 Unit" },
+	{ ingredient: "Cucumber", quantity: "1 Unit" },
+        { ingredient: "Pimms No 1", quantity: "6 Counts" },
+        { ingredient: "Ginger Ale", quantity: "0.25 Can" },
+        { ingredient: "Lemonade", quantity: "Top" }
+      ],
+      glass: "Highball",
+      method: "Build",
+      garnish: "Mint Sprig",
+      ice: "Cubed"
+    },
+    {
+      category: "classics",
+      page: 7,
+      name: "Lynchburg Lemonade",
+      ingredients: [
+        { ingredient: "Lemon Mix", quantity: "3 Counts" },
+        { ingredient: "Jack Daniels Black Label", quantity: "4 Counts" },
+        { ingredient: "Cointreau", quantity: "2 Counts" },
+	{ ingredient: "Lemonade", quantity: "Top" }
+      ],
+      glass: "Bremen Beer",
+      method: "Build and Churn",
+      garnish: "Lemon Sq",
+      ice: "Cubed"
+    },
+    {
+      category: "classics",
+      page: 7,
+      name: "Tequila Sunrise",
+      ingredients: [
+        { ingredient: "El Jimador Blanco", quantity: "6 Counts" },
+        { ingredient: "Orange Juice", quantity: "6 Counts" },
+        { ingredient: "BSC Disco Grenadine", quantity: "2 Counts" }
+      ],
+      glass: "Highball",
+      method: "Build",
       garnish: "Orange Sq & Cherry",
       ice: "Cubed"
     },
     {
-      page: 2,
-      name: "Southside",
+      category: "classics",
+      page: 7,
+      name: "Toreador",
       ingredients: [
-        { ingredient: "Millers Gin", quantity: "8 Counts" },
-        { ingredient: "Mint Leaves", quantity: "8 Leaves" },
-        { ingredient: "Lime Juice", quantity: "3 Counts" },
-        { ingredient: "BSC Simple 1:1", quantity: "2 Counts" }
-      ],
-      glass: "Nick and Nora",
-      method: "Shake & Double Strain",
-      garnish: "Small Mint Sprig",
-      ice: "None"
-    },
-    {
-      page: 2,
-      name: "Dark'n'Stormy",
-      ingredients: [
-        { ingredient: "Goslings Black Seal Rum", quantity: "6 Counts" },
-        { ingredient: "Lime Juice", quantity: "3 Counts" },
-        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "1 Dash" },
-        { ingredient: "Artisan Ginger Beer", quantity: "1/2 Can" }
-      ],
-      glass: "Tall Highball",
-      method: "Build",
-      garnish: "Lime Wheel",
-      ice: "Cubed"
-    },
-    {
-      page: 2,
-      name: "Moscow Mule",
-      ingredients: [
-        { ingredient: "Ketel One", quantity: "6 Counts" },
-        { ingredient: "Lime Juice", quantity: "3 Counts" },
-        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "1 Dash" },
-        { ingredient: "Artisan Ginger Beer", quantity: "1/2 Can" }
-      ],
-      glass: "Tall Highball",
-      method: "Build",
-      garnish: "Lime Wheel",
-      ice: "Cubed"
-    },
-    {
-      page: 2,
-      name: "Caipirinha",
-      ingredients: [
-        { ingredient: "Sagatiba Pura", quantity: "8 Counts" },
-        { ingredient: "Lime Sq", quantity: "6 Units" },
-        { ingredient: "Caster Sugar", quantity: "2 Barspns" }
-      ],
-      glass: "Rocks",
-      method: "Muddle Shake & Pour",
-      garnish: "None",
-      ice: "Cubed"
-    },
-    {
-      page: 2,
-      name: "Bees Knees",
-      ingredients: [
-        { ingredient: "Millers Gin", quantity: "8 Counts" },
-        { ingredient: "Lemon Mix", quantity: "2 Counts" },
-        { ingredient: "Lemon Sq", quantity: "2 Units" },
-        { ingredient: "Honey", quantity: "15 ml Jig" }
-      ],
-      glass: "Nick and Nora",
-      method: "Shake and Double Strain",
-      garnish: "Lemon Zest",
-      ice: "None"
-    },
-    {
-    page: 3,
-      name: "French Martini",
-      ingredients: [
-        { ingredient: "Pineapple Juice", quantity: "4 Counts" },
-        { ingredient: "Dutch Barn Vodka", quantity: "5 Counts" },
-        { ingredient: "MK Dark Berries", quantity: "2 Counts" }
-      ],
-      glass: "Coupe",
-      method: "Hard Shake & Double Strain",
-      garnish: "Diced Freeze dried Raspberries",
-      ice: "None"
-    },
-    {
-      page: 3,
-      name: "Mai Tai",
-      ingredients: [
-        { ingredient: "BSC Disco Grenadine",quantity: "1 Count" },
-        { ingredient: "BSC Orgeat", quantity: "3 Counts" },
-        { ingredient: "Lime Juice", quantity: "3 Counts" },
-	      { ingredient: "Appleton Estate 8 Year", quantity: "5 Counts" },
-        { ingredient: "Grand Marnier", quantity: "2 Counts" }
-      ],
-      glass: "Rocks",
-      method: "Shake and Strain",
-      garnish: "Mint Sprig, Lime Sq, Cherry",
-      ice: "Crushed"
-    },
-    {
-      page: 3,
-      name: "Martinez",
-      ingredients: [
-        { ingredient: "Bitter Truth Orange Bitters", quantity: "1 Dash" },
-        { ingredient: "Millers Gin", quantity: "6 Counts" },
-        { ingredient: "Martini Rubino Vermouth", quantity: "2 Counts" },
-	{ ingredient: "Briottet Marasquin", quantity: "1 Count" }
-      ],
-      glass: "Nick and Nora",
-      method: "Stir & Strain",
-      garnish: "Orange Zest & Cherry",
-      ice: "None"
-    },
-    {
-      page: 3,
-      name: "Sazerac",
-      ingredients: [
-        { ingredient: "La Fee Absinthe", quantity: "1 Count" },
-        { ingredient: "BSC Simple 1:1", quantity: "1 Count" },
-        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "1 Dash" },
-        { ingredient: "Peychaud Bitters", quantity: "3 Dashes" },
-        { ingredient: "Woodford Rye", quantity: "3 Counts" },
-        { ingredient: "Courvoisier VS", quantity: "3 Counts" }
-      ],
-      glass: "Nick and Nora",
-      method: "Rinse / Stir & Strain",
-      garnish: "Lemon zest",
-      ice: "None"
-    },
-    {
-      page: 3,
-      name: "Aviation",
-      ingredients: [
-        { ingredient: "Lemon Sq", quantity: "2 Units" },
-        { ingredient: "Lemon Mix", quantity: "3 Counts" },
-        { ingredient: "Millers Gin", quantity: "6 Counts" },
-        { ingredient: "Briottet Violette", quantity: "1 Count" },
-        { ingredient: "Briottet Marasquin", quantity: "1 Count" },
-        { ingredient: "Lemon Zest Discard", quantity: "1 Unit" }
-      ],
-      glass: "Coupe",
-      method: "Shake & Double Strain",
-      garnish: "Luxardo Cherries",
-      ice: "None"
-    },
-    {
-      page: 3,
-      name: "Manhattan ( Perfect )",
-      ingredients: [
-        { ingredient: "Buffalo Trace", quantity: "8 Units" },
-        { ingredient: "Carpano Dry Vermouth", quantity: "1 Count" },
-        { ingredient: "Martini Rubino Vermouth", quantity: "1 Count" },
-        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "1 Count" }
-      ],
-      glass: "Nick and Nora",
-      method: "Stir & Strain",
-      garnish: "Orange Zest & Cherry",
-      ice: "None"
-    },
-    {
-      page: 4,
-      name: "Boulevardier",
-      ingredients: [
-        { ingredient: "Buffalo Trace", quantity: "4 Counts" },
-        { ingredient: "Martini Rubino Vermouth", quantity: "4 Counts" },
-        { ingredient: "Campari", quantity: "4 Counts" }
-      ],
-      glass: "Sexy Rocks",
-      method: "Stir & Strain",
-      garnish: "Orange Zest",
-      ice: "Cubed"
-    },
-    {
-      page: 4,
-      name: "Sidecar",
-      ingredients: [
-        { ingredient: "Lemon Mix", quantity: "3 Counts" },
-        { ingredient: "Courvoisier VS", quantity: "3 Counts" },
-        { ingredient: "Cointreau", quantity: "3 Counts" }
-      ],
-      glass: "Nick and Nora",
-      method: "Shake & Double Strain",
-      garnish: "Lemon Zest & Sugar Rim",
-      ice: "None"
-    },
-    {
-      page: 4,
-      name: "White Lady",
-      ingredients: [
-        { ingredient: "Lemon Sq", quantity: "3 Units" },
-        { ingredient: "Lemon Mix", quantity: "2 Counts" },
-        { ingredient: "Oggs", quantity: "15 ml Jig" },
-        { ingredient: "Tanqueray", quantity: "4 Counts" },
-        { ingredient: "Cointreau", quantity: "2 Counts" }
-      ],
-      glass: "Coupe",
-      method: "Blend 3 cubes & Fine Strain",
-      garnish: "Lemon Zest",
-      ice: "None"
-    },
-    {
-      page: 4,
-      name: "Hemingway Daiquiri",
-      ingredients: [
-        { ingredient: "Grapefruit Juice", quantity: "2 Counts" },
         { ingredient: "Lime Juice", quantity: "3 Counts" },
         { ingredient: "BSC Simple 1:1", quantity: "2 Counts" },
-        { ingredient: "Bacardi Carta Blanca", quantity: "7 Counts" },
-        { ingredient: "Briottet Marasquin", quantity: "2 Counts" }
+        { ingredient: "El Jimador Blanco", quantity: "6 Counts" },
+        { ingredient: "Briottet Crème d'Apricot", quantity: "3 Counts" }
       ],
       glass: "Coupe",
       method: "Shake & Double Strain",
@@ -326,121 +195,408 @@
       ice: "None"
     },
     {
-      page: 4,
-      name: "Brandy Alexander",
+      category: "classics",
+      page: 7,
+      name: "Clover Club",
       ingredients: [
-        { ingredient: "Whipping Cream", quantity: "25 ml Jig" },
-        { ingredient: "Courvoisier VS", quantity: "4 Counts" },
-        { ingredient: "Briottet Crème De Cacao Brown", quantity: "4 Counts" }
-      ],
-      glass: "Nick and Nora",
-      method: "Shake & Double Strain",
-      garnish: "Cinnamon and Nutmeg Dust",
-      ice: "None"
-    },
-    {
-      page: 4,
-      name: "Charlie Chaplin",
-      ingredients: [
-        { ingredient: "La Fee Absinthe", quantity: "1 Count" },
-        { ingredient: "BSC Simple 1:1", quantity: "1 Count" },
-        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "1 Dash" },
-        { ingredient: "Peychaud Bitters", quantity: "3 Dashes" },
-        { ingredient: "Woodford Rye", quantity: "3 Counts" },
-        { ingredient: "Courvoisier VS", quantity: "3 Counts" }
+        { ingredient: "Lemon Mix", quantity: "3 Counts" },
+        { ingredient: "Oggs", quantity: "25 ml Jig" },
+        { ingredient: "BSC Raspberry", quantity: "4 Counts" },
+	{ ingredient: "Tanqueray", quantity: "6 Counts" },
+        { ingredient: "Peychaud Bitters", quantity: "2 Dashes" }
       ],
       glass: "Coupe",
-      method: "Shake & Double Strain",
-      garnish: "Lime Zest",
+      method: "Blend 3 Cubes & Fine Strain",
+      garnish: "Whole Freeze Dried Raspberries",
       ice: "None"
     },
-    {
-      page: 5,
-      name: "Penicillin",
+   {
+      category: "classics",
+      page: 8,
+      name: "Picante",
       ingredients: [
-        { ingredient: "Laphroaig", quantity: "3 Counts" },
-        { ingredient: "Johnnie Walker Black", quantity: "3 Counts" },
-        { ingredient: "Kaveri Ginger", quantity: "1 Count" },
-        { ingredient: "Lemon Mix", quantity: "3 Counts" },
-        { ingredient: "Honey", quantity: "1 Barspn" }
+        { ingredient: "Patron Silver", quantity: "6 Counts" },
+        { ingredient: "Lime Juice", quantity: "3 Counts" },
+        { ingredient: "BSC Nogave", quantity: "3 Counts" },
+        { ingredient: "Red Chili", quantity: "1 Unit" },
+        { ingredient: "Coriander Sprigs", quantity: "3 Units" }
       ],
       glass: "Sexy Rocks",
       method: "Shake and Strain",
-      garnish: "Lemon Zest",
+      garnish: "Chili Stem",
       ice: "Cubed"
     },
     {
-      page: 5,
-      name: "Godfather",
+      category: "classics",
+      page: 8,
+      name: "Corpse Reviver No. 2",
       ingredients: [
-        { ingredient: "Johnnie Walker Black", quantity: "4 Counts" },
-        { ingredient: "Luxardo Amaretto", quantity: "4 Counts" }
+        { ingredient: "Lemon Mix", quantity: "3 Counts" },
+        { ingredient: "Millers Gin", quantity: "3 Counts" },
+	{ ingredient: "Cointreau", quantity: "2 Counts" },
+        { ingredient: "Carpano Bianco", quantity: "2 Counts" },
+        { ingredient: "La Fee Absinthe", quantity: "2 Barspns" }
       ],
-      glass: "Sexy Rocks",
-      method: "Build Over Ice Ball",
-      garnish: "Flamed Orange Zest",
-      ice: "Iceball"
+      glass: "Nick and Nora",
+      method: "Shake & Double Strain",
+      garnish: "Luxardo Cherries",
+      ice: "None"
     },
     {
-      page: 5,
-      name: "Tom Collins",
+      category: "classics",
+      page: 8,
+      name: "Naked & Famous",
       ingredients: [
-        { ingredient: "Lemon Zest", quantity: "3 Units" },
-        { ingredient: "Herno Old Tom Gin", quantity: "8 Counts" },
-        { ingredient: "Soda", quantity: "Top Pm" }
+        { ingredient: "Aperol", quantity: "25 ml Jig" },
+        { ingredient: "Mezcal Verde", quantity: "25 ml Jig" },
+        { ingredient: "Chartreuse Yellow", quantity: "25 ml Jig" },
+	{ ingredient: "Lime Juice", quantity: "25 ml Jig" }
+      ],
+      glass: "Coupe",
+      method: "Shake & Fine Strain",
+      garnish: "Grapefruit Zest",
+      ice: "None"
+    },
+    {
+      category: "classics",
+      page: 8,
+      name: "Jungle Bird",
+      ingredients: [
+        { ingredient: "Appleton Signature", quantity: "3 Counts" },
+        { ingredient: "Goslings Black Seal Rum", quantity: "3 Counts" },
+        { ingredient: "Lime Juice", quantity: "2 Counts" },
+	{ ingredient: "Pineapple Juice", quantity: "3 Counts" },
+        { ingredient: "BSC Simple 1:1", quantity: "2 Counts" },
+        { ingredient: "Campari", quantity: "1 Count" }
       ],
       glass: "Highball",
+      method: "Shake and Strain",
+      garnish: "Banana Leaf",
+      ice: "Cubed"
+    },
+    {
+      category: "classics",
+      page: 8,
+      name: "Mint Julep",
+      ingredients: [
+        { ingredient: "Mint Leaves", quantity: "3 Counts" },
+        { ingredient: "BSC Simple 1:1", quantity: "2 Counts" },
+        { ingredient: "Buffalo Trace", quantity: "6 Counts" }
+      ],
+      glass: "Rocks",
       method: "Build and Churn",
+      garnish: "Mint Sprig",
+      ice: "Crushed"
+    },
+    {
+      category: "classics",
+      page: 8,
+      name: "Americano",
+      ingredients: [
+        { ingredient: "Campari", quantity: "4 Counts" },
+        { ingredient: "Martini Rubino Vermouth", quantity: "4 Counts" },
+        { ingredient: "Soda Pm", quantity: "Top" }
+      ],
+      glass: "Sexy Rocks",
+      method: "Stir & Strain",
+      garnish: "Lemon Zest",
+      ice: "Cubed"
+    },
+   {
+      category: "classics",
+      page: 9,
+      name: "Long Island Iced Tea",
+      ingredients: [
+        { ingredient: "Lemon Mix", quantity: "3 Counts" },
+        { ingredient: "Ketel One", quantity: "2 Counts" },
+        { ingredient: "Bacardi Carta Blanca", quantity: "2 Counts" },
+        { ingredient: "Tanqueray", quantity: "1 Count" },
+        { ingredient: "Cointreau", quantity: "1 Count" },
+        { ingredient: "El Jimador Blanco", quantity: "1 Count" },
+        { ingredient: "Coke Zero", quantity: "Top" }
+      ],
+      glass: "Tall Highball",
+      method: "Build",
       garnish: "Lemon Sq",
       ice: "Cubed"
     },
     {
-      page: 5,
-      name: "Singapore Sling",
+      category: "classics",
+      page: 9,
+      name: "Paper Plane",
       ingredients: [
-        { ingredient: "Tanqueray", quantity: "4 Counts" },
-        { ingredient: "Briottet Marasquin", quantity: "2 Counts" },
-        { ingredient: "Lemon Mix", quantity: "2 Counts" },
-        { ingredient: "Pineapple Juice", quantity: "3 Counts" },
-        { ingredient: "Benedictine", quantity: "1 Count" },
-        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "1 Dash" },
-        { ingredient: "Soda Pm", quantity: "Top" },
-        { ingredient: "BSC Disco Grenadine", quantity: "1 Count" }
-      ],
-      glass: "Tall Highball",
-      method: "Shake, Strain & Top",
-      garnish: "Lemon Sq & Cherry",
-      ice: "Cubed"
-    },
-    {
-      page: 5,
-      name: "Vesper Martini",
-      ingredients: [
-        { ingredient: "Lillet Blanc", quantity: "1 Count" },
-        { ingredient: "Dutch Barn Vodka", quantity: "2 Counts" },
-        { ingredient: "Millers Gin", quantity: "6 Counts" }
+        { ingredient: "Buffalo Trace", quantity: "3 Counts" },
+        { ingredient: "Aperol", quantity: "3 Counts" },
+	{ ingredient: "Amaro Averna", quantity: "3 Counts" },
+        { ingredient: "Lemon Mix", quantity: "3 Counts" }
       ],
       glass: "Nick and Nora",
-      method: "Shake and Double Strain",
-      garnish: "Lemon zest",
+      method: "Shake & Fine Strain",
+      garnish: "None",
       ice: "None"
     },
     {
-      page: 5,
-      name: "June Bug",
+      category: "classics",
+      page: 9,
+      name: "Rusty Nail",
+      ingredients: [
+        { ingredient: "Johnnie Walker Black", quantity: "5 Counts" },
+        { ingredient: "Drambuie", quantity: "3 Counts" }
+      ],
+      glass: "Sexy Rocks",
+      method: "Stir & Strain",
+      garnish: "Lemon Zest",
+      ice: "Cubed"
+    },
+    {
+      category: "classics",
+      page: 9,
+      name: "Harvey Wallbanger",
+      ingredients: [
+        { ingredient: "Ketel One", quantity: "4 Counts" },
+        { ingredient: "Orange Juice", quantity: "6 Counts" },
+        { ingredient: "Galliano", quantity: "2 Counts" }
+      ],
+      glass: "Highball",
+      method: "Build",
+      garnish: "Orange Sq",
+      ice: "Cubed"
+    },
+    {
+      category: "classics",
+      page: 9,
+      name: "Painkiller",
       ingredients: [
         { ingredient: "Pineapple Juice", quantity: "4 Counts" },
-        { ingredient: "Lemon Mix", quantity: "3 Counts" },
-        { ingredient: "Bacardi Coconut", quantity: "3 Counts" },
-        { ingredient: "Midori", quantity: "2 Counts" },
-        { ingredient: "Giffard Banane du Brésil", quantity: "2 Counts" }
+        { ingredient: "Orange Juice", quantity: "1 Count" },
+        { ingredient: "ODK Coconut", quantity: "25 ml Jig" },
+        { ingredient: "Goslings Black Seal Rum", quantity: "6 Counts" }
       ],
-      glass: "Tall Highball",
+      glass: "Highball",
       method: "Shake and Strain",
-      garnish: "Banana Leaf",
+      garnish: "Cinnamon and Nutmeg Dust",
       ice: "Cubed"
+    },
+    {
+      category: "classics",
+      page: 9,
+      name: "The Last Word",
+      ingredients: [
+        { ingredient: "Lime Juice", quantity: "25 ml Jig" },
+        { ingredient: "Millers Gin", quantity: "25 ml Jig" },
+        { ingredient: "Chartreuse Green", quantity: "25 ml Jig" },
+        { ingredient: "Briottet Marasquin", quantity: "1 Count" }
+      ],
+      glass: "Nick and Nora",
+      method: "Shake & Double Strain",
+      garnish: "Luxardo Cherries",
+      ice: "None"
+    },
+    {
+      category: "classics",
+      page: 10,
+      name: "Vieux Carré",
+      ingredients: [
+        { ingredient: "Peychaud Bitters", quantity: "1 Dash" },
+        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "1 Dash" },
+        { ingredient: "Woodford Reserve Rye", quantity: "3 Counts" },
+        { ingredient: "Martini Rubino Vermouth", quantity: "3 Count" },
+        { ingredient: "Courvoisier VS", quantity: "3 Count" },
+        { ingredient: "Benedictine", quantity: "1 Count" }
+      ],
+      glass: "Sexy Rocks",
+      method: "Stir & Strain",
+      garnish: "Luxardo Cherries & Lemon Zest",
+      ice: "Ice Ball"
+    },
+    {
+      category: "classics",
+      page: 10,
+      name: "Gimlet",
+      ingredients: [
+        { ingredient: "Lime Cordial", quantity: "2 Counts" },
+        { ingredient: "Millers Gin", quantity: "8 Counts" }
+      ],
+      glass: "Nick and Nora",
+      method: "Stir & Strain",
+      garnish: "Lime Zest",
+      ice: "None"
+    },
+    {
+      category: "classics",
+      page: 10,
+      name: "Blood & Sand",
+      ingredients: [
+        { ingredient: "Orange Juice", quantity: "1 Count" },
+        { ingredient: "Briottet Marasquin", quantity: "2 Counts" }, 
+	{ ingredient: "Johnnie Walker Black", quantity: "4 Counts" },
+        { ingredient: "Martini Rubino Vermouth", quantity: "2 Counts" }
+      ],
+      glass: "Coupe",
+      method: "Shake & Double Strain",
+      garnish: "Luxardo Cherries",
+      ice: "None"
+    },
+    {
+      category: "classics",
+      page: 10,
+      name: "Breakfast Martini",
+      ingredients: [
+        { ingredient: "Alchemist Marmalde", quantity: "4 Counts" },
+        { ingredient: "Lemon Mix", quantity: "6 Counts" },
+        { ingredient: "Tanqueray", quantity: "2 Counts" },
+        { ingredient: "Cointreau", quantity: "2 Counts" }
+      ],
+      glass: "Nick and Nora",
+      method: "Shake & Double Strain",
+      garnish: "Orange Zest",
+      ice: "None"
+    },
+    {
+      category: "classics",
+      page: 10,
+      name: "Bramble",
+      ingredients: [
+        { ingredient: "Tanqueray", quantity: "5 Counts" },
+        { ingredient: "Lemon Mix", quantity: "3 Counts" },
+        { ingredient: "Briottet Crème De Mure", quantity: "2 Counts Top" }
+      ],
+      glass: "Rocks",
+      method: "Build and Churn",
+      garnish: "Lemon Sq & Cherry",
+      ice: "Crushed"
+    },
+    {
+      category: "classics",
+      page: 10,
+      name: "Japanese Slipper",
+      ingredients: [
+        { ingredient: "Midori", quantity: "4 Counts" },
+        { ingredient: "Cointreau", quantity: "4 Counts" },
+        { ingredient: "Lemon Mix", quantity: "4 Counts" }
+      ],
+      glass: "Nick and Nora",
+      method: "Shake & Fine Strain",
+      garnish: "Luxardo Cherries",
+      ice: "None"
+    },
+    {
+      category: "classics",
+      page: 11,
+      name: "Basil Smash",
+      ingredients: [
+        { ingredient: "Tanqueray", quantity: "8 Counts" },
+        { ingredient: "Lemon Mix", quantity: "3 Counts" },
+        { ingredient: "BSC Simple 1:1", quantity: "1 Count" },
+        { ingredient: "Basil Leaves", quantity: "8 Leaves" }
+      ],
+      glass: "Rocks",
+      method: "Hard Shake & Fine Strain",
+      garnish: "Basil Leaf",
+      ice: "Cubed"
+    },
+    {
+      category: "classics",
+      page: 11,
+      name: "Grass Hopper",
+      ingredients: [
+        { ingredient: "Whipping Cream", quantity: "25 ml Jig" },
+        { ingredient: "Briottet Cacao Blanc", quantity: "4 Counts" },
+        { ingredient: "Briottet Menthe Green", quantity: "4 Counts" }
+      ],
+      glass: "Nick and Nora",
+      method: "Shake & Fine Strain",
+      garnish: "Cinnamon and Nutmeg Dust",
+      ice: "None"
+    },
+    {
+      category: "classics",
+      page: 11,
+      name: "Irish Coffee",
+      ingredients: [
+        { ingredient: "Jameson", quantity: "6 Counts" },
+        { ingredient: "Demerara Sugar", quantity: "1 Barspn" }, 
+	{ ingredient: "Hot Water", quantity: "125 ml" },
+        { ingredient: "Espresso", quantity: "1 Unit" },
+        { ingredient: "Whipping Cream", quantity: "30 ml" }
+      ],
+      glass: "Amber Coffee Glass",
+      method: "Build & Stir",
+      garnish: "Cinnamon/Nutmeg & Hammered Spoon",
+      ice: "None"
+    },
+    {
+      category: "classics",
+      page: 11,
+      name: "Sangria",
+      ingredients: [
+        { ingredient: "Any Open Red Wine", quantity: "175 ml" },
+        { ingredient: "Orange Juice", quantity: "2 Counts" },
+        { ingredient: "Lime Sq", quantity: "1 Unit" },
+        { ingredient: "Orange Slice", quantity: "1 Unit" },
+        { ingredient: "Cointreau", quantity: "2 Counts" }
+      ],
+      glass: "Wine Glass",
+      method: "Build",
+      garnish: "None",
+      ice: "Cubed"
+    },
+    {
+      category: "classics",
+      page: 11,
+      name: "Champagne Cocktail",
+      ingredients: [
+        { ingredient: "Demerara Sugar", quantity: "1 Barspn" },
+        { ingredient: "Bitter Truth Jerry Thomas Bitters", quantity: "3 Dashes" },
+        { ingredient: "Courvoisier VS", quantity: "2 Counts" },
+        { ingredient: "Moet Champagne", quantity: "110 ml" }
+      ],
+      glass: "Chilled Flute",
+      method: "Build",
+      garnish: "None",
+      ice: "None"
+    },
+    {
+      category: "classics",
+      page: 11,
+      name: "French 75",
+      ingredients: [
+        { ingredient: "Lemon Mix", quantity: "2 Counts" },
+        { ingredient: "Tanqueray", quantity: "4 Counts" },
+        { ingredient: "Moet Champagne", quantity: "80 ml" }
+      ],
+      glass: "Chilled Flute",
+      method: "Build",
+      garnish: "Lemon Zest",
+      ice: "None"
+    },
+    {
+      category: "classics",
+      page: 12,
+      name: "Bucks Fizz",
+      ingredients: [
+        { ingredient: "Orange Juice", quantity: "2 Counts" },
+        { ingredient: "Alchemist Prosecco", quantity: "85 ml" }
+      ],
+      glass: "Chilled Flute",
+      method: "Build",
+      garnish: "None",
+      ice: "None"
+    },
+    {
+      category: "classics",
+      page: 12,
+      name: "Kir Royale",
+      ingredients: [
+        { ingredient: "Briottet Cassis (Blackcurrant)", quantity: "2 Counts" },
+        { ingredient: "Moet Champagne", quantity: "110 ml" }
+      ],
+      glass: "Chilled Flute",
+      method: "Build",
+      garnish: "None",
+      ice: "None"
     }
-  ];
+];
 
   async function seedCocktails() {
     try {
